@@ -98,4 +98,3 @@ coputed with Strassen, the complexity becomes O(n ^ log2(7)).
 	- frees the memory for all the matrices in the array
 	- frees the 2 arrays that stored the matrices and their dimensions
 	- stops the program
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
