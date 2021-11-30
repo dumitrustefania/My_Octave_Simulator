@@ -1,51 +1,47 @@
-// Copyright 2021 Dumitru Bianca Stefania
+Copyright 2021 Dumitru Bianca Stefania
 
 Computer Programming
 
-Homework #2 - My Octave simulator
+# Homework #2 - My Octave simulator
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## General description and notes:
 
-General description and notes:
-
-*) All the arrays and matrices used are dinamically alocated in memory,
+- All the arrays and matrices used are dinamically alocated in memory,
 using malloc(), realloc() and free() functions from the stdlib.h library.
 
-*) I defined 2 data types: "dim" (that stores 2 ints - the no. of lines and
+- I defined 2 data types: "dim" (that stores 2 ints - the no. of lines and
 columns of a matrix) and "pack" (that stores the array of matrices, the 
 array of matrix dimensions and the number of matrices present in the array)
 
-*) I always give my_pack (the bundle of matrices, dimensions and their size)
+- I always give my_pack (the bundle of matrices, dimensions and their size)
 as parameter in the functions because I have to check whether malloc() or 
 realloc() fails. In case it does, I have to free all the memory I allocated, 
 so I need to have acces to the arrays.
 
-*) In the main() function, I initially allocate space for 10 elements 
+- In the main() function, I initially allocate space for 10 elements 
 in the matrices and dimensions arrays
 
-*) There are 10 possible commands that can be recieved from input:
+- There are 10 possible commands that can be recieved from input:
 
-- 'L' - Loads a matrix with the given sizes and values into the memory
-- 'D' - Prints the no. of lines & columns of the matrix at the given index
-- 'P' - Prints the values present in the matrix at the given index
-- 'C' - Resizes the matrix based on the given instructions
-- 'M' - Multiplies two matrices, adding the resulted matrix into memory
-- 'O' - Sorts the matrices in ascending order, based on the 
+  - 'L' - Loads a matrix with the given sizes and values into the memory
+   - 'D' - Prints the no. of lines & columns of the matrix at the given index
+   - 'P' - Prints the values present in the matrix at the given index
+   - 'C' - Resizes the matrix based on the given instructions
+   - 'M' - Multiplies two matrices, adding the resulted matrix into memory
+   - 'O' - Sorts the matrices in ascending order, based on the 
 		sum of their values
-- 'T' - Transposes the matrix at the given index
-- 'F' - Frees the matrix at a given index
-- 'S' - Multiplies two square matrices using the Strassen algorithm
-- 'Q' - Frees all the memory alocated and stops the program
+   - 'T' - Transposes the matrix at the given index
+   - 'F' - Frees the matrix at a given index
+   - 'S' - Multiplies two square matrices using the Strassen algorithm
+   - 'Q' - Frees all the memory alocated and stops the program
 
-*) Strassen is used for multiplying matrices whose size can be written
+- Strassen is used for multiplying matrices whose size can be written
 as 2 ^ n. The 2 matrices are split into 4 smaller matrices and certain 
 operations are performed recursively until reaching 1x1 matrices.
 Because at each step there are 7 matrices that have to be recursively
 coputed with Strassen, the complexity becomes O(n ^ log2(7)).
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Commands:
+## Commands:
 
 1) 'L' - Load matrix
 	- allocates dinamically the necessary memory for the matrix
@@ -102,3 +98,4 @@ Commands:
 	- frees the memory for all the matrices in the array
 	- frees the 2 arrays that stored the matrices and their dimensions
 	- stops the program
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
